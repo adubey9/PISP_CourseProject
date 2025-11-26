@@ -89,4 +89,9 @@ These allow users to compare **vulnerable vs. secure** behavior.
 ### **1. Build and Start Using Docker**
 ```bash
 docker-compose up --build
-
+```
+### **2. Access the Lab in the Browser**
+After the Docker container starts successfully, open your browser and visit:
+```bash
+http://localhost
+```
