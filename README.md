@@ -1,4 +1,4 @@
-# Reflective XSS Testing Environment Using Docker
+# DOM XSS Testing Environment Using Docker
 
 ## Overview
 This project provides a simplified and controlled environment for learning and experimenting with **Reflected Cross-Site Scripting (XSS)** vulnerabilities.  
