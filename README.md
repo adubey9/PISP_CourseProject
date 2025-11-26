@@ -28,6 +28,7 @@ Includes examples of escaping, encoding, and safer rendering techniques to highl
 ---
 
 ## Project Structure
+```text
 bugbounty/
 ├── assets/ # Static assets used by the web application
 ├── checks.php # Input handling / validation logic (intentionally insecure)
@@ -43,6 +44,7 @@ bugbounty/
 ├── set-permissions.sh # Sets file permissions inside the container
 ├── ssti-labs/ # Additional vulnerability labs (not used for XSS)
 └── user-content/ # User-generated content (stored locally)
+```
 
 ## Core Components
 
