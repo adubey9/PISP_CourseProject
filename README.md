@@ -28,3 +28,63 @@ Includes examples of escaping, encoding, and safer rendering techniques to highl
 ---
 
 ## Project Structure
+bugbounty/
+├── assets/ # Static assets used by the web application
+├── checks.php # Input handling / validation logic (intentionally insecure)
+├── db.php # Local DB mock (if needed for extensions)
+├── dev.md # Developer notes and instructions
+├── docker-compose.yml # Docker environment setup
+├── Dockerfile # Builds the vulnerable XSS testing container
+├── Dockerfile-SSTI # (If used) Alternative Dockerfile for SSTI labs
+├── includes/ # Shared PHP includes and templates
+├── index.php # Main entry point – reflects user input
+├── init.php # Initialization and config loader
+├── labs/ # Placeholder for additional labs (XSS examples, exercises)
+├── set-permissions.sh # Sets file permissions inside the container
+├── ssti-labs/ # Additional vulnerability labs (not used for XSS)
+└── user-content/ # User-generated content (stored locally)
+
+## Core Components
+
+### **Reflective Input Handling**
+The main entry point (`index.php`) takes user input from query parameters and reflects it directly into the HTML response.  
+This allows learners to see how unescaped input can be interpreted by the browser.
+
+### **Harmless XSS Payload Testing**
+The lab includes only safe, demonstration-level payloads to help users understand XSS behavior without enabling misuse.
+
+### **Dockerized Environment**
+The application is fully containerized using a single `Dockerfile` and `docker-compose.yml`, making the lab:
+- Easy to set up  
+- Easy to reset  
+- Completely isolated from the host machine  
+
+### **Modular Lab Layout**
+Additional lab files can be added inside the `labs/` folder to expand exercises or include variations of reflected XSS scenarios.
+
+---
+
+## Learning Approach
+
+### **Reflective XSS Demonstration**
+1. The user provides input in the URL or form.  
+2. The server reflects this input back into the output page.  
+3. Because the output is not sanitized, the browser may interpret it as HTML or script.  
+4. The user observes how and why reflected XSS occurs.
+
+### **Safe Mode Demonstration (Optional)**
+Some included files show safer techniques such as:
+- HTML escaping  
+- Output encoding  
+- Basic input validation  
+
+These allow users to compare **vulnerable vs. secure** behavior.
+
+---
+
+## How to Run the Lab
+
+### **1. Build and Start Using Docker**
+```bash
+docker-compose up --build
+
