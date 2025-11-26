@@ -93,5 +93,5 @@ docker-compose up --build
 ### **2. Access the Lab in the Browser**
 After the Docker container starts successfully, open your browser and visit:
 ```bash
-http://localhost
+localhost
 ```
