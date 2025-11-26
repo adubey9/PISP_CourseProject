@@ -62,6 +62,10 @@ http://localhost:80
 ### Approach
 In Lab 1 I did DOM Based XSS where I tried `<image src=x onerror="prompt(1)">` and `<img src=x onerror="window.location.href='https://youtube.com'">`
 
+## References
+* **TCM Security** - [https://tcm-sec.com](https://tcm-sec.com)
+  * Special thanks to TCM Security for providing the learning resources and lab files for this project.
+
 
 
 
