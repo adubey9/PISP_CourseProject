@@ -59,10 +59,8 @@ Once the containers are running, open your browser and visit:
 http://localhost:80
 ```
 
-## Approach
-## In Lab1
-```
-
+### Approach
+In Lab 1 I did DOM Based XSS where I tried `<image src=x onerror="prompt(1)">` and `<img src=x onerror="window.location.href='https://youtube.com'">`
 
 
 
