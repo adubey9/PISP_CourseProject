@@ -46,17 +46,18 @@ sudo apt install docker-compose
 ```bash
 cd bugbounty
 ```
-## Start the Environment
-```text
-Run the Docker environment using:
-```
+
+Start the Docker environment:
+
 ```bash
 docker-compose up
 ```
-```text
-Once started, open your browser and visit:
-```
 
+Once the containers are running, open your browser and visit:
+
+```text
+http://localhost:80
+```
 
 ## Approach
 ## In Lab1
